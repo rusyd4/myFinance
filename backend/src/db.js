@@ -1,10 +1,7 @@
-const { Pool } = require('pg');
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'tutam9',
-  password: 'p',
-  port: 5432,
-});
+const { MongoClient } = require('mongodb');
+require('dotenv').config();
 
-module.exports = pool;
+const uri = process.env.DB_CONNECTION_STRING;
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+module.exports = client;

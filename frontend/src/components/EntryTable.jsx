@@ -105,11 +105,11 @@ const EntryTable = ({
         <tbody>
           {entries.map((entry) => (
             <tr
-              key={entry.id}
+              key={entry._id} // Using _id as the unique key
               className="hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
             >
               <td className="px-4 py-2 font-medium dark:text-gray-300">
-                {getTypeIcon(editId === entry.id ? editType : entry.type)}
+                {getTypeIcon(editId === entry._id ? editType : entry.type)}
               </td>
               <td className="px-4 py-2 dark:text-gray-300">{entry.amount}</td>
               <td className="px-4 py-2 dark:text-gray-300">
@@ -124,10 +124,10 @@ const EntryTable = ({
                 })}
               </td>
               <td className="px-4 py-2 flex items-center space-x-2">
-                {editId === entry.id ? (
+                {editId === entry._id ? (
                   <>
                     <button
-                      onClick={() => saveEdit(entry.id)}
+                      onClick={() => saveEdit(entry._id)}
                       className="text-green-500 hover:text-green-700 transition duration-300 dark:text-green-400 dark:hover:text-green-500"
                     >
                       <CheckIcon className="w-5 h-5" />
@@ -148,7 +148,7 @@ const EntryTable = ({
                       <PencilIcon className="w-5 h-5" />
                     </button>
                     <button
-                      onClick={() => deleteEntry(entry.id)}
+                      onClick={() => deleteEntry(entry._id)}
                       className="text-red-500 hover:text-red-700 transition duration-300 dark:text-red-400 dark:hover:text-red-500"
                     >
                       <TrashIcon className="w-5 h-5" />

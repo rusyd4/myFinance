@@ -99,7 +99,10 @@ const FinanceTracker = () => {
   };
 
   const startEditing = (entry) => {
-    setEditId(entry.id);
+    setEditId(entry._id); // Use _id instead of id
+    setEditDescription(entry.description);
+    setEditAmount(entry.amount);
+    setEditType(entry.type);
     setEditModalOpen(true);
   };
 
