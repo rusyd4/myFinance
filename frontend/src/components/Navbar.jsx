@@ -19,7 +19,7 @@ const Navbar = () => {
           to="/about"
           className="text-white no-underline px-4 py-1 mx-2 text-lg font-medium rounded hover:bg-gray-700 transition duration-300"
         >
-          About Me
+          About Us
         </Link>
       </div>
     </nav>

@@ -5,6 +5,7 @@ const AboutMe = () => {
   const persons = [
     { name: "Naufal Rusyda Santosa", id: "2206813353" },
     { name: "Muhammad Nadhif Fasichul Ilmi", id: "2206813416" },
+    { name: "Muhammad Abrisam Cahyo Juhartono", id: "2206026050" },
     { name: "Muhammad Fahish Haritsah Bimo", id: "2206059616" },
     { name: "Achmad Zaidan Lazuardy", id: "2206059793" }
   ];

@@ -226,11 +226,11 @@ const FinanceTracker = () => {
         <div className="mb-6 text-center">
           <h2 className="text-xl font-semibold">
             Total Income:{" "}
-            <span className="text-green-500">${totals.income}</span>
+            <span className="text-green-500">Rp{totals.income}</span>
           </h2>
           <h2 className="text-xl font-semibold">
             Total Expenses:{" "}
-            <span className="text-red-500">${totals.expenses}</span>
+            <span className="text-red-500">Rp{totals.expenses}</span>
           </h2>
         </div>
         {showDateFilterModal && (
